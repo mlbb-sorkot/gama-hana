@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Wedding Invitation of Gama & Hana - Saturday, 20 December 2026">
+  <meta name="author" content="Gama & Hana">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Wedding of Gama & Hana">
+  <meta property="og:description" content="You are cordially invited to celebrate the wedding of Gama & Hana on Saturday, 20 December 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+
+  <title>Wedding of Gama & Hana</title>
+
+  <!-- Favicon / Logo Tab Browser (Monogram GM) -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       COVER PAGE — Full-screen overlay
+       ============================================================ -->
+  <div id="cover" class="cover" role="dialog" aria-label="Wedding Invitation Cover">
+    <div class="cover__inner">
+      <!-- Top ornament -->
+      <div class="ornament ornament--top" aria-hidden="true">
+        <span class="ornament__line"></span>
+        <span class="ornament__diamond"></span>
+        <span class="ornament__line"></span>
+      </div>
+
+      <p class="cover__subtitle">The Wedding of</p>
+
+      <h1 class="cover__names">
+        <span class="cover__name">Gama</span>
+        <span class="cover__amp">&amp;</span>
+        <span class="cover__name">Hana</span>
+      </h1>
+
+      <p class="cover__date">Saturday, 20 December 2026</p>
+
+      <!-- Bottom ornament -->
+      <div class="ornament ornament--bottom" aria-hidden="true">
+        <span class="ornament__line"></span>
+        <span class="ornament__diamond"></span>
+        <span class="ornament__line"></span>
+      </div>
+
+      <!-- Guest name (populated via JS from ?to= parameter) -->
+      <p class="cover__guest" id="guestGreeting"></p>
+
+      <button class="cover__btn" id="openInvitation" aria-label="Open Invitation">
+        <span class="cover__btn-text">Buka Undangan</span>
+        <span class="cover__btn-icon" aria-hidden="true">▼</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT (hidden behind cover until opened)
+       ============================================================ -->
+  <main id="mainContent" class="main-content" aria-hidden="true">
+
+    <!-- ========== HERO SECTION ========== -->
+    <section id="hero" class="hero section--full" aria-label="Hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <div class="ornament" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <h2 class="hero__names">
+          <span class="hero__name" data-aos="fade-right" data-aos-duration="1000">Gama</span>
+          <span class="hero__amp" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">&amp;</span>
+          <span class="hero__name" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">Hana</span>
+        </h2>
+
+        <p class="hero__date" data-aos="fade-up" data-aos-delay="600">Saturday, 21 November 2026</p>
+
+        <div class="ornament" aria-hidden="true" data-aos="fade-up" data-aos-delay="800">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COUPLE PROFILE SECTION ========== -->
+    <section id="couple" class="couple section" aria-label="Mempelai">
+      <div class="container">
+        <p class="section__subtitle" data-aos="fade-up">Salam Sejahtera</p>
+        <h2 class="section__title" data-aos="fade-up">Kedua Mempelai</h2>
+        <div class="section__divider" data-aos="fade-up" data-aos-delay="100" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <p class="couple__intro" data-aos="fade-up" data-aos-delay="150">
+          Dengan penuh rasa syukur dan sukacita, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri hari bahagia pernikahan kami:
+        </p>
+
+        <div class="couple__grid">
+          <!-- Mempelai Pria -->
+          <article class="couple__card" data-aos="fade-up" data-aos-delay="200">
+            <div class="couple__avatar" aria-hidden="true">
+              <span>G</span>
+            </div>
+            <h3 class="couple__name" id="groomFullName">Gamaliel Lingga</h3>
+            <p class="couple__order" id="groomChildOrder">Putra Pertama dari Tiga Bersaudara</p>
+            <div class="couple__line" aria-hidden="true"></div>
+            <p class="couple__parents" id="groomParents">Putra dari Bpk. Besli Lingga &amp; Ibu Sri Manurung</p>
+          </article>
+
+          <!-- Simbol Ampersand Tengah -->
+          <div class="couple__amp-center" aria-hidden="true" data-aos="zoom-in" data-aos-delay="300">
+            <span>&amp;</span>
+          </div>
+
+          <!-- Mempelai Wanita -->
+          <article class="couple__card" data-aos="fade-up" data-aos-delay="400">
+            <div class="couple__avatar" aria-hidden="true">
+              <span>H</span>
+            </div>
+            <h3 class="couple__name" id="brideFullName">Hana Pasik</h3>
+            <p class="couple__order" id="brideChildOrder">Putri Kedua dari Dua Bersaudara</p>
+            <div class="couple__line" aria-hidden="true"></div>
+            <p class="couple__parents" id="brideParents">Putri dari Bpk. Hendra Pasik &amp; Ibu Rina</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COUNTDOWN SECTION ========== -->
+    <section id="countdown" class="countdown section" aria-label="Countdown">
+      <div class="container">
+        <h2 class="section__title countdown__title" data-aos="fade-up">Menuju Hari Bahagia</h2>
+        <div class="section__divider" data-aos="fade-up" data-aos-delay="100" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <div class="countdown__grid" data-aos="zoom-in" data-aos-delay="200">
+          <div class="countdown__item">
+            <span class="countdown__number" id="cdDays">00</span>
+            <span class="countdown__label">Days</span>
+          </div>
+          <div class="countdown__separator" aria-hidden="true">:</div>
+          <div class="countdown__item">
+            <span class="countdown__number" id="cdHours">00</span>
+            <span class="countdown__label">Hours</span>
+          </div>
+          <div class="countdown__separator" aria-hidden="true">:</div>
+          <div class="countdown__item">
+            <span class="countdown__number" id="cdMinutes">00</span>
+            <span class="countdown__label">Min</span>
+          </div>
+          <div class="countdown__separator" aria-hidden="true">:</div>
+          <div class="countdown__item">
+            <span class="countdown__number" id="cdSeconds">00</span>
+            <span class="countdown__label">Sec</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LOVE STORY TIMELINE ========== -->
+    <section id="story" class="story section" aria-label="Our Love Story">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Our Love Story</h2>
+        <div class="section__divider" data-aos="fade-up" data-aos-delay="100" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <div class="timeline">
+          <!-- Milestone 1 -->
+          <div class="timeline__item timeline__item--left" data-aos="fade-right" data-aos-duration="800">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__photo" aria-label="Photo placeholder for First Met">
+                <span>Photo</span>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__date">January 2020</span>
+                <h3 class="timeline__title">First Met</h3>
+                <p class="timeline__desc">
+                  Our paths crossed for the first time at a cozy little café downtown. 
+                  It was an ordinary day that turned into something extraordinary — 
+                  a simple hello that changed everything.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 2 -->
+          <div class="timeline__item timeline__item--right" data-aos="fade-left" data-aos-duration="800">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__photo" aria-label="Photo placeholder for First Date">
+                <span>Photo</span>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__date">March 2020</span>
+                <h3 class="timeline__title">First Date</h3>
+                <p class="timeline__desc">
+                  A walk in the park under the cherry blossoms — nervous laughter, 
+                  endless conversations, and the feeling that we had known 
+                  each other for a lifetime.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 3 -->
+          <div class="timeline__item timeline__item--left" data-aos="fade-right" data-aos-duration="800">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__photo" aria-label="Photo placeholder for The Proposal">
+                <span>Photo</span>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__date">June 2025</span>
+                <h3 class="timeline__title">The Proposal</h3>
+                <p class="timeline__desc">
+                  Under a canopy of stars, with a heart full of love, 
+                  the question was asked and the answer was a tearful, 
+                  joyful "Yes!" — the beginning of forever.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Milestone 4 -->
+          <div class="timeline__item timeline__item--right" data-aos="fade-left" data-aos-duration="800">
+            <div class="timeline__marker" aria-hidden="true"></div>
+            <div class="timeline__content">
+              <div class="timeline__photo" aria-label="Photo placeholder for The Wedding">
+                <span>Photo</span>
+              </div>
+              <div class="timeline__text">
+                <span class="timeline__date">December 2026</span>
+                <h3 class="timeline__title">The Wedding</h3>
+                <p class="timeline__desc">
+                  The day we say "I do" and begin our greatest adventure together. 
+                  Surrounded by the people we love most, 
+                  we become one family, one heart, one story.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div><!-- /.timeline -->
+      </div>
+    </section>
+
+    <!-- ========== EVENT DETAILS (AKAD & RESEPSI) ========== -->
+    <section id="events" class="events section" aria-label="Event Details">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Wedding Events</h2>
+        <div class="section__divider" data-aos="fade-up" data-aos-delay="100" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <div class="events__grid">
+          <!-- Akad Nikah -->
+          <article class="event-card" data-aos="fade-right" data-aos-duration="800">
+            <div class="event-card__icon" aria-hidden="true">💍</div>
+            <h3 class="event-card__title">Akad Nikah</h3>
+            <div class="event-card__divider" aria-hidden="true"></div>
+            <p class="event-card__date">Sabtu, 20 Desember 2026</p>
+            <p class="event-card__time">08:00 – 10:00 WIB</p>
+            <p class="event-card__venue">Gedung Serbaguna Grand Ballroom</p>
+            <p class="event-card__address">Jl. Sudirman No. 123, Jakarta Selatan</p>
+            <a href="https://maps.google.com/?q=-6.2088,106.8456" target="_blank" rel="noopener noreferrer" class="event-card__btn" aria-label="View Akad Nikah location on Google Maps">
+              Lihat Lokasi
+            </a>
+          </article>
+
+          <!-- Resepsi -->
+          <article class="event-card" data-aos="fade-left" data-aos-duration="800">
+            <div class="event-card__icon" aria-hidden="true">🎉</div>
+            <h3 class="event-card__title">Resepsi</h3>
+            <div class="event-card__divider" aria-hidden="true"></div>
+            <p class="event-card__date">Sabtu, 20 Desember 2026</p>
+            <p class="event-card__time">11:00 – 14:00 WIB</p>
+            <p class="event-card__venue">Gedung Serbaguna Grand Ballroom</p>
+            <p class="event-card__address">Jl. Sudirman No. 123, Jakarta Selatan</p>
+            <a href="https://maps.google.com/?q=-6.2088,106.8456" target="_blank" rel="noopener noreferrer" class="event-card__btn" aria-label="View Resepsi location on Google Maps">
+              Lihat Lokasi
+            </a>
+          </article>
+        </div>
+
+        <!-- Embedded Google Maps -->
+        <div class="events__map" data-aos="fade-up" data-aos-delay="200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.194741399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Wedding Venue Location">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PHOTO GALLERY ========== -->
+    <section id="gallery" class="gallery section" aria-label="Photo Gallery">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Our Gallery</h2>
+        <div class="section__divider" data-aos="fade-up" data-aos-delay="100" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <div class="gallery__grid">
+          <div class="gallery__item" data-aos="fade-up" data-aos-delay="0" tabindex="0" role="button" aria-label="View Photo 1">
+            <img src="galeri-1.webp" alt="Galeri Foto 1" class="gallery__img" loading="lazy">
+            <div class="gallery__overlay"><span>View</span></div>
+          </div>
+          <div class="gallery__item" data-aos="fade-up" data-aos-delay="100" tabindex="0" role="button" aria-label="View Photo 2">
+            <img src="galeri-2.webp" alt="Galeri Foto 2" class="gallery__img" loading="lazy">
+            <div class="gallery__overlay"><span>View</span></div>
+          </div>
+          <div class="gallery__item" data-aos="fade-up" data-aos-delay="200" tabindex="0" role="button" aria-label="View Photo 3">
+            <img src="galeri-3.webp" alt="Galeri Foto 3" class="gallery__img" loading="lazy">
+            <div class="gallery__overlay"><span>View</span></div>
+          </div>
+          <div class="gallery__item" data-aos="fade-up" data-aos-delay="0" tabindex="0" role="button" aria-label="View Photo 4">
+            <img src="galeri-4.webp" alt="Galeri Foto 4" class="gallery__img" loading="lazy">
+            <div class="gallery__overlay"><span>View</span></div>
+          </div>
+          <div class="gallery__item" data-aos="fade-up" data-aos-delay="100" tabindex="0" role="button" aria-label="View Photo 5">
+            <img src="galeri-5.webp" alt="Galeri Foto 5" class="gallery__img" loading="lazy">
+            <div class="gallery__overlay"><span>View</span></div>
+          </div>
+          <div class="gallery__item" data-aos="fade-up" data-aos-delay="200" tabindex="0" role="button" aria-label="View Photo 6">
+            <img src="galeri-6.webp" alt="Galeri Foto 6" class="gallery__img" loading="lazy">
+            <div class="gallery__overlay"><span>View</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Photo Lightbox" aria-hidden="true">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+      <div class="lightbox__content" id="lightboxContent"></div>
+    </div>
+
+    <!-- ========== TURUT MENGUNDANG (HOSTS) ========== -->
+    <section id="hosts" class="hosts section" aria-label="Turut Mengundang">
+      <div class="container">
+        <h2 class="section__title" data-aos="fade-up">Turut Mengundang</h2>
+        <div class="section__divider" data-aos="fade-up" data-aos-delay="100" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <div class="hosts__grid">
+          <!-- Keluarga Mempelai Pria -->
+          <div class="hosts__column" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="hosts__subtitle" id="hostsGroomTitle">Keluarga Pria</h3>
+            <ul class="hosts__list" id="hostsGroomList">
+              <!-- Rendered via JS -->
+            </ul>
+          </div>
+
+          <!-- Divider Ornamen Tengah -->
+          <div class="hosts__separator" aria-hidden="true">
+            <span class="ornament__diamond"></span>
+          </div>
+
+          <!-- Keluarga Mempelai Wanita -->
+          <div class="hosts__column" data-aos="fade-up" data-aos-delay="300">
+            <h3 class="hosts__subtitle" id="hostsBrideTitle">Keluarga Wanita</h3>
+            <ul class="hosts__list" id="hostsBrideList">
+              <!-- Rendered via JS -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer section" aria-label="Footer">
+      <div class="container">
+        <div class="ornament" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <h2 class="footer__names" data-aos="fade-up">Gama &amp; Hana</h2>
+        <p class="footer__message" data-aos="fade-up" data-aos-delay="100">
+          Thank you for being part of our special day
+        </p>
+        <p class="footer__date" data-aos="fade-up" data-aos-delay="200">
+          Saturday, 20 December 2026
+        </p>
+
+        <div class="ornament" aria-hidden="true" data-aos="fade-up" data-aos-delay="300">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <p class="footer__credit" data-aos="fade-up" data-aos-delay="400">
+          Made with ❤️
+        </p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ========== MUSIC TOGGLE (floating) ========== -->
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle background music" title="Toggle Music">
+    <span class="music-toggle__icon" id="musicIcon">♫</span>
+  </button>
+
+  <!-- Background music -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="1103.WAV" type="audio/wav">
+  </audio>
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Database Statis Klien -->
+  <script src="js/data.js"></script>
+
+  <!-- Main Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
