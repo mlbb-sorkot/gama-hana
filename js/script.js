@@ -81,41 +81,12 @@
         if (bIg) {
           if (data.couple.bride.instagram) {
             bIg.href = 'https://instagram.com/' + data.couple.bride.instagram.replace('@', '');
-            bIg.innerHTML = '<span>📷 ' + data.couple.bride.instagram + '</span>';
+            bIg.innerHTML = '<img src="Instagram.svg" alt="Instagram" class="couple__ig-icon"><span>' + data.couple.bride.instagram + '</span>';
             bIg.style.display = 'inline-flex';
           } else {
             bIg.style.display = 'none';
           }
         }
-      }
-    }
-
-    // Love Story Timeline
-    if (data.loveStory && data.loveStory.length > 0) {
-      var timelineContainer = document.querySelector('.timeline');
-      if (timelineContainer) {
-        var timelineHTML = '';
-        data.loveStory.forEach(function (story, index) {
-          var isLeft = (index % 2 === 0);
-          var alignClass = isLeft ? 'timeline__item--left' : 'timeline__item--right';
-          var aosAnim = isLeft ? 'fade-right' : 'fade-left';
-
-          timelineHTML += 
-            '<div class="timeline__item ' + alignClass + '" data-aos="' + aosAnim + '" data-aos-duration="800">' +
-              '<div class="timeline__marker" aria-hidden="true"></div>' +
-              '<div class="timeline__content">' +
-                '<div class="timeline__photo" aria-label="Photo placeholder">' +
-                  '<span>Photo</span>' +
-                '</div>' +
-                '<div class="timeline__text">' +
-                  '<span class="timeline__date">' + story.date + '</span>' +
-                  '<h3 class="timeline__title">' + story.title + '</h3>' +
-                  '<p class="timeline__desc">' + story.description + '</p>' +
-                '</div>' +
-              '</div>' +
-            '</div>';
-        });
-        timelineContainer.innerHTML = timelineHTML;
       }
     }
 

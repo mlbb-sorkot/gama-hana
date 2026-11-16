@@ -315,8 +315,8 @@ button {
 .hero {
   position: relative;
   background:
-    radial-gradient(ellipse at 50% 30%, rgba(212,165,165,0.12) 0%, transparent 70%),
-    var(--clr-bg-alt);
+    linear-gradient(rgba(255, 248, 245, 0.78), rgba(250, 240, 235, 0.85)),
+    url('../cover.webp') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -379,7 +379,9 @@ button {
    COUPLE PROFILE SECTION
    ========================================================================== */
 .couple {
-  background: var(--clr-bg-alt);
+  background:
+    linear-gradient(rgba(255, 248, 245, 0.82), rgba(250, 240, 235, 0.88)),
+    url('../galeri-2.webp') center/cover no-repeat;
   text-align: center;
 }
 
@@ -412,7 +414,9 @@ button {
 
 .couple__card {
   flex: 1;
-  background: var(--clr-bg);
+  background: rgba(255, 248, 245, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 2.8rem 2rem;
   border-radius: var(--radius);
   border: 1px solid rgba(201, 169, 110, 0.25);
@@ -426,16 +430,29 @@ button {
 }
 
 .couple__avatar {
-  width: 80px;
-  height: 80px;
+  width: 95px;
+  height: 95px;
   margin: 0 auto 1.4rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--clr-soft-blush), var(--clr-dusty-rose));
-  border: 2px solid var(--clr-gold);
+  border: 2.5px solid var(--clr-gold);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.25);
+  overflow: hidden;
+  box-shadow: 0 4px 18px rgba(201, 169, 110, 0.3);
+  background: var(--clr-bg-alt);
+}
+
+.couple__avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.couple__card:hover .couple__avatar-img {
+  transform: scale(1.08);
 }
 
 .couple__avatar span {
@@ -479,9 +496,9 @@ button {
 .couple__ig {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   margin-top: 1rem;
-  padding: 0.4rem 1.2rem;
+  padding: 0.45rem 1.2rem;
   border-radius: 50px;
   background: var(--clr-bg-alt);
   border: 1px solid rgba(201, 169, 110, 0.35);
@@ -489,6 +506,13 @@ button {
   color: var(--clr-rose-gold);
   font-weight: 500;
   transition: all var(--transition);
+}
+
+.couple__ig-icon {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  object-fit: contain;
 }
 
 .couple__ig:hover {
@@ -759,14 +783,16 @@ button {
    EVENT DETAILS
    ========================================================================== */
 .events {
-  background: var(--clr-bg);
+  background:
+    linear-gradient(rgba(255, 248, 245, 0.82), rgba(250, 240, 235, 0.88)),
+    url('../galeri-4.webp') center/cover no-repeat;
 }
 
 .events__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 640px) {
@@ -776,8 +802,10 @@ button {
 }
 
 .event-card {
-  background: var(--clr-bg-alt);
-  border: 1px solid rgba(201,169,110,0.2);
+  background: rgba(255, 248, 245, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(201,169,110,0.25);
   border-radius: var(--radius);
   padding: 2.5rem 2rem;
   text-align: center;
