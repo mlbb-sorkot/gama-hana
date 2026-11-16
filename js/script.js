@@ -32,7 +32,7 @@
     var coupleDisplay = groom + ' & ' + bride;
 
     // Title Tag & Meta
-    document.title = 'Wedding of ' + coupleDisplay;
+    document.title = 'Pernikahan ' + coupleDisplay;
 
     // Cover Section
     var coverNames = document.querySelector('.cover__names');
@@ -43,8 +43,8 @@
         '<span class="cover__name">' + bride + '</span>';
     }
     var coverDate = document.querySelector('.cover__date');
-    if (coverDate && data.weddingDate && data.weddingDate.displayDateEn) {
-      coverDate.textContent = data.weddingDate.displayDateEn;
+    if (coverDate && data.weddingDate) {
+      coverDate.textContent = data.weddingDate.displayDateId || data.weddingDate.displayDateEn;
     }
 
     // Hero Section
@@ -56,8 +56,8 @@
         '<span class="hero__name">' + bride + '</span>';
     }
     var heroDate = document.querySelector('.hero__date');
-    if (heroDate && data.weddingDate && data.weddingDate.displayDateEn) {
-      heroDate.textContent = data.weddingDate.displayDateEn;
+    if (heroDate && data.weddingDate) {
+      heroDate.textContent = data.weddingDate.displayDateId || data.weddingDate.displayDateEn;
     }
 
     // Couple Profile Section
@@ -157,7 +157,7 @@
           galleryHTML += 
             '<div class="gallery__item" data-aos="fade-up" data-aos-delay="' + delay + '" tabindex="0" role="button" aria-label="View Photo ' + (idx + 1) + '">' +
               '<img src="' + photo.src + '" alt="' + (photo.alt || 'Foto Galeri ' + (idx + 1)) + '" class="gallery__img" loading="lazy">' +
-              '<div class="gallery__overlay"><span>View</span></div>' +
+              '<div class="gallery__overlay"><span>Lihat</span></div>' +
             '</div>';
         });
         galleryGrid.innerHTML = galleryHTML;
@@ -211,8 +211,8 @@
     }
 
     var footerDate = document.querySelector('.footer__date');
-    if (footerDate && data.weddingDate && data.weddingDate.displayDateEn) {
-      footerDate.textContent = data.weddingDate.displayDateEn;
+    if (footerDate && data.weddingDate) {
+      footerDate.textContent = data.weddingDate.displayDateId || data.weddingDate.displayDateEn;
     }
 
     var footerCredit = document.querySelector('.footer__credit');
@@ -228,7 +228,7 @@
     const params = new URLSearchParams(window.location.search);
     const guestName = params.get('to');
     if (guestName && guestGreeting) {
-      guestGreeting.textContent = 'Dear ' + decodeURIComponent(guestName) + ',';
+      guestGreeting.textContent = 'Kepada Yth. ' + decodeURIComponent(guestName);
     }
   }
 

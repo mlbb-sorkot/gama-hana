@@ -31,7 +31,7 @@ const WEDDING_DATA = {
   weddingDate: {
     // Format ISO untuk Countdown: YYYY-MM-DDTHH:mm:ss+ZonaWaktu (contoh: +07:00 untuk WIB)
     targetISO: "2026-11-21T08:00:00+07:00",
-    displayDateEn: "Saturday, 21 November 2026",
+    displayDateEn: "Sabtu, 21 November 2026",
     displayDateId: "Sabtu, 21 November 2026"
   },
 
@@ -62,24 +62,24 @@ const WEDDING_DATA = {
   // Kisah Cinta / Milestone (Love Story)
   loveStory: [
     {
-      date: "January 2025",
-      title: "First Met",
-      description: "Our paths crossed for the first time at a cozy little café downtown. It was an ordinary day that turned into something extraordinary — a simple hello that changed everything."
+      date: "Januari 2025",
+      title: "Pertama Bertemu",
+      description: "Pertemuan pertama kami yang tak terduga di sebuah kedai kopi. Dari obrolan sederhana, tumbuh rasa yang luar biasa yang mengubah segalanya."
     },
     {
-      date: "March 2025",
-      title: "First Date",
-      description: "A walk in the park under the cherry blossoms — nervous laughter, endless conversations, and the feeling that we had known each other for a lifetime."
+      date: "Maret 2025",
+      title: "Kencan Pertama",
+      description: "Berjalan santai bersama di tengah suasana yang hangat — penuh tawa, obrolan tanpa henti, dan perasaan nyaman seolah telah saling mengenal sejak lama."
     },
     {
-      date: "June 2025",
-      title: "The Proposal",
-      description: "Under a canopy of stars, with a heart full of love, the question was asked and the answer was a tearful, joyful \"Yes!\" — the beginning of forever."
+      date: "Juni 2025",
+      title: "Lamaran",
+      description: "Di bawah langit penuh bintang dan dengan hati yang mantap, sebuah janji terucap dan dijawab dengan penuh haru dan bahagia: \"Ya!\" — awal dari selamanya."
     },
     {
       date: "November 2026",
-      title: "The Wedding",
-      description: "The day we say \"I do\" and begin our greatest adventure together. Surrounded by the people we love most, we become one family, one heart, one story."
+      title: "Hari Pernikahan",
+      description: "Hari di mana kami mengikat janji suci dan memulai babak baru bersama. Dikelilingi orang-orang terkasih, kami menyatukan dua hati dan keluarga."
     }
   ],
 
@@ -113,8 +113,8 @@ const WEDDING_DATA = {
 
   // Footer & Ucapan
   footer: {
-    message: "Thank you for being part of our special day",
-    credit: "Made with ❤️"
+    message: "Terima kasih telah menjadi bagian dari hari bahagia kami",
+    credit: "Dibuat dengan ❤️"
   }
 };
 
