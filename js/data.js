@@ -12,25 +12,25 @@ const WEDDING_DATA = {
   couple: {
     groom: {
       shortName: "Gama",
-      fullName: "Gamaliel Lingga",
-      childOrder: "Putra Pertama dari Tiga Bersaudara",
-      parents: "Putra dari Bpk. Besli Lingga & Ibu Sri Manurung",
-      instagram: "@gamalingga" // opsional
+      fullName: "Gamaliel Gihon Royter Lingga",
+      childOrder: "Putra ke-1 dari 2 bersaudara",
+      parents: "Putra dari IPTU BESLI ARWAN LINGGA, S.Sos. & MAGDALENA DOLOKSARIBU, S.Tr.Keb.Bdn.",
+      instagram: "" // opsional
     },
     bride: {
       shortName: "Hana",
-      fullName: "Hana Pasik",
-      childOrder: "Putri Kedua dari Dua Bersaudara",
-      parents: "Putri dari Bpk. Hendra Pasik & Ibu Rina",
-      instagram: "@hanapasik" // opsional
+      fullName: "Hana Marselina Pasik",
+      childOrder: "Putri ke-3 dari 3 bersaudara",
+      parents: "Putri dari Letkol (Purn) MELKI SEDECH MARINUS PASIK & ELISABETH BONGI PADULANG",
+      instagram: "@hanna_mrslna"
     },
     monogram: "GM" // Digunakan untuk inisial / branding
   },
 
   // Waktu Acara Utama (Digunakan untuk Cover, Countdown, & Metadata)
+  // Zona waktu WIT (Papua / Sorong) adalah UTC+9
   weddingDate: {
-    // Format ISO untuk Countdown: YYYY-MM-DDTHH:mm:ss+ZonaWaktu (contoh: +07:00 untuk WIB)
-    targetISO: "2026-11-21T08:00:00+07:00",
+    targetISO: "2026-11-21T08:00:00+09:00",
     displayDateEn: "Sabtu, 21 November 2026",
     displayDateId: "Sabtu, 21 November 2026"
   },
@@ -38,48 +38,48 @@ const WEDDING_DATA = {
   // Detail Acara
   events: {
     akad: {
-      title: "Pemberkatan",
+      title: "Pemberkatan Nikah",
       icon: "💍",
-      date: "Senin, 16 November 2026",
-      time: "08:00 – 10:00 WIB",
-      venue: "Gedung Serbaguna Grand Ballroom",
-      address: "Jl. Sudirman No. 123, Jakarta Selatan",
-      mapsUrl: "https://maps.google.com/?q=-6.2088,106.8456"
+      date: "Sabtu, 21 November 2026",
+      time: "08.00 WIT",
+      venue: "Gereja GKI Efata Matalamagi",
+      address: "Kota Sorong, Papua Barat Daya",
+      mapsUrl: "https://maps.app.goo.gl/23LgXSw2RQ5VDvaF6?g_st=ic"
     },
     resepsi: {
-      title: "Resepsi",
+      title: "Resepsi Pernikahan",
       icon: "🎉",
       date: "Sabtu, 21 November 2026",
-      time: "11:00 – 14:00 WIB",
-      venue: "Gedung Serbaguna Grand Ballroom",
-      address: "Jl. Sudirman No. 123, Jakarta Selatan",
-      mapsUrl: "https://maps.google.com/?q=-6.2088,106.8456"
+      time: "11.00 WIT",
+      venue: "Gedung Tongkonan Toraya Kota Sorong",
+      address: "Kota Sorong, Papua Barat Daya",
+      mapsUrl: "https://maps.app.goo.gl/vWQRCj39WJFyimE68?g_st=ic"
     },
-    // Embed Google Maps (iframe src)
-    mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.194741399999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5d2e764b12d%3A0x3d2ad6e1e0e9bcc8!2sMonumen%20Nasional!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+    // Embed Google Maps (Sorong / Tongkonan Toraya Kota Sorong)
+    mapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.514695028045!2d131.25!3d-0.88!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d595568efab6611%3A0x7d39356ef24e7561!2sSorong%2C%20Sorong%20City%2C%20West%20Papua!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
   },
 
   // Kisah Cinta / Milestone (Love Story)
   loveStory: [
     {
-      date: "Januari 2025",
+      date: "Tahun 2022",
       title: "Pertama Bertemu",
-      description: "Pertemuan pertama kami yang tak terduga di sebuah kedai kopi. Dari obrolan sederhana, tumbuh rasa yang luar biasa yang mengubah segalanya."
+      description: "Berawal dari sebuah pertemuan di Polresta Sorong Kota pada tahun 2022 sebagai rekan kerja."
     },
     {
-      date: "Maret 2025",
-      title: "Kencan Pertama",
-      description: "Berjalan santai bersama di tengah suasana yang hangat — penuh tawa, obrolan tanpa henti, dan perasaan nyaman seolah telah saling mengenal sejak lama."
+      date: "14 Maret 2023",
+      title: "Menjalin Hubungan",
+      description: "Takdir kemudian membawa kami semakin dekat hingga pada 14 Maret 2023, kami memutuskan untuk saling mengenal dan menjalin hubungan."
     },
     {
-      date: "Juni 2025",
-      title: "Lamaran",
-      description: "Di bawah langit penuh bintang dan dengan hati yang mantap, sebuah janji terucap dan dijawab dengan penuh haru dan bahagia: \"Ya!\" — awal dari selamanya."
+      date: "2023 – 2026",
+      title: "Perjalanan Bersama",
+      description: "Lebih dari tiga tahun bersama, kami melewati berbagai cerita, suka dan duka, menguatkan komitmen satu sama lain."
     },
     {
-      date: "November 2026",
-      title: "Hari Pernikahan",
-      description: "Hari di mana kami mengikat janji suci dan memulai babak baru bersama. Dikelilingi orang-orang terkasih, kami menyatukan dua hati dan keluarga."
+      date: "21 November 2026",
+      title: "Melangkah ke Jenjang Pernikahan",
+      description: "Hingga akhirnya kami memantapkan hati untuk melangkah ke jenjang pernikahan suci di hadapan Tuhan dan keluarga tercinta."
     }
   ],
 
@@ -102,16 +102,20 @@ const WEDDING_DATA = {
   // Turut Mengundang
   hosts: {
     groomFamily: [
-      "Keluarga Besar Bpk. Besli Lingga",
-      "Keluarga Besar Ibu Sri Manurung"
+      "Keluarga Besar IPTU BESLI ARWAN LINGGA, S.Sos.",
+      "Keluarga Besar MAGDALENA DOLOKSARIBU, S.Tr.Keb.Bdn."
     ],
     brideFamily: [
-      "Keluarga Besar Bpk. Hendra Pasik",
-      "Keluarga Besar Ibu Rina"
+      "Keluarga Besar Letkol (Purn) MELKI SEDECH MARINUS PASIK",
+      "Keluarga Besar ELISABETH BONGI PADULANG"
     ]
   },
 
-  // Footer & Ucapan
+  // Quotes & Footer
+  quote: {
+    text: "Together, beyond forever"
+  },
+
   footer: {
     message: "Terima kasih telah menjadi bagian dari hari bahagia kami",
     credit: "Dibuat dengan ❤️"

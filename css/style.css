@@ -476,6 +476,27 @@ button {
   line-height: 1.6;
 }
 
+.couple__ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  padding: 0.4rem 1.2rem;
+  border-radius: 50px;
+  background: var(--clr-bg-alt);
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  font-size: 0.8rem;
+  color: var(--clr-rose-gold);
+  font-weight: 500;
+  transition: all var(--transition);
+}
+
+.couple__ig:hover {
+  background: var(--clr-rose-gold);
+  color: #fff;
+  border-color: var(--clr-rose-gold);
+}
+
 .couple__amp-center {
   font-family: var(--ff-serif);
   font-size: 2.6rem;
@@ -1125,6 +1146,16 @@ button {
   background: var(--clr-bg);
   text-align: center;
   padding-bottom: 3rem;
+}
+
+.footer__quote {
+  font-family: var(--ff-serif);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  font-style: italic;
+  color: var(--clr-rose-gold);
+  margin: 1rem auto 0.5rem;
+  max-width: 600px;
+  letter-spacing: 0.03em;
 }
 
 .footer__names {

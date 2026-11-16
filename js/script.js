@@ -74,9 +74,19 @@
         var bFull = document.getElementById('brideFullName');
         var bOrder = document.getElementById('brideChildOrder');
         var bParents = document.getElementById('brideParents');
+        var bIg = document.getElementById('brideInstagram');
         if (bFull) bFull.textContent = data.couple.bride.fullName || bride;
         if (bOrder) bOrder.textContent = data.couple.bride.childOrder || '';
         if (bParents) bParents.textContent = data.couple.bride.parents || '';
+        if (bIg) {
+          if (data.couple.bride.instagram) {
+            bIg.href = 'https://instagram.com/' + data.couple.bride.instagram.replace('@', '');
+            bIg.innerHTML = '<span>📷 ' + data.couple.bride.instagram + '</span>';
+            bIg.style.display = 'inline-flex';
+          } else {
+            bIg.style.display = 'none';
+          }
+        }
       }
     }
 
@@ -201,7 +211,12 @@
       }
     }
 
-    // Footer
+    // Quotes & Footer
+    var quoteEl = document.getElementById('weddingQuote');
+    if (quoteEl && data.quote && data.quote.text) {
+      quoteEl.innerHTML = '&ldquo;' + data.quote.text + '&rdquo;';
+    }
+
     var footerNames = document.querySelector('.footer__names');
     if (footerNames) footerNames.textContent = coupleDisplay;
 
