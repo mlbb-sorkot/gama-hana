@@ -95,8 +95,8 @@ const WEDDING_DATA = {
 
   // Background Audio & Cover
   media: {
-    audioSrc: "1103.WAV",
-    audioType: "audio/wav"
+    audioSrc: "Nadin Amizah - Berpayung Tuhan.mp3",
+    audioType: "audio/mpeg"
   },
 
   // Turut Mengundang
