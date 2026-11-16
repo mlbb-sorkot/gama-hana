@@ -36,37 +36,41 @@
        ============================================================ -->
   <div id="cover" class="cover" role="dialog" aria-label="Wedding Invitation Cover">
     <div class="cover__inner">
-      <!-- Top ornament -->
-      <div class="ornament ornament--top" aria-hidden="true">
-        <span class="ornament__line"></span>
-        <span class="ornament__diamond"></span>
-        <span class="ornament__line"></span>
+      <!-- Bagian Atas: Teks Judul & Mempelai -->
+      <div class="cover__header">
+        <div class="ornament ornament--top" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
+
+        <p class="cover__subtitle">Pernikahan Dari</p>
+
+        <h1 class="cover__names">
+          <span class="cover__name">Gama</span>
+          <span class="cover__amp">&amp;</span>
+          <span class="cover__name">Hana</span>
+        </h1>
+
+        <p class="cover__date">Sabtu, 21 November 2026</p>
+
+        <div class="ornament ornament--bottom" aria-hidden="true">
+          <span class="ornament__line"></span>
+          <span class="ornament__diamond"></span>
+          <span class="ornament__line"></span>
+        </div>
       </div>
 
-      <p class="cover__subtitle">Pernikahan Dari</p>
+      <!-- Area Tengah: Dibiarkan kosong/bersih untuk wajah mempelai -->
+      <div class="cover__spacer" aria-hidden="true"></div>
 
-      <h1 class="cover__names">
-        <span class="cover__name">Gama</span>
-        <span class="cover__amp">&amp;</span>
-        <span class="cover__name">Hana</span>
-      </h1>
-
-      <p class="cover__date">Sabtu, 21 November 2026</p>
-
-      <!-- Bottom ornament -->
-      <div class="ornament ornament--bottom" aria-hidden="true">
-        <span class="ornament__line"></span>
-        <span class="ornament__diamond"></span>
-        <span class="ornament__line"></span>
+      <!-- Bagian Bawah: Tombol Buka Undangan -->
+      <div class="cover__footer">
+        <button class="cover__btn" id="openInvitation" aria-label="Open Invitation">
+          <span class="cover__btn-text">Buka Undangan</span>
+          <span class="cover__btn-icon" aria-hidden="true">▼</span>
+        </button>
       </div>
-
-      <!-- Guest name (populated via JS from ?to= parameter) -->
-      <p class="cover__guest" id="guestGreeting"></p>
-
-      <button class="cover__btn" id="openInvitation" aria-label="Open Invitation">
-        <span class="cover__btn-text">Buka Undangan</span>
-        <span class="cover__btn-icon" aria-hidden="true">▼</span>
-      </button>
     </div>
   </div>
 

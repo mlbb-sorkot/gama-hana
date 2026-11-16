@@ -185,15 +185,37 @@ button {
 
 .cover__inner {
   text-align: center;
-  padding: 2.5rem 1.5rem;
-  padding-top: calc(2rem + env(safe-area-inset-top));
-  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+  padding: 1.5rem 1.5rem;
+  padding-top: calc(1.5rem + env(safe-area-inset-top));
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
   margin: auto;
   position: relative;
   z-index: 1;
   animation: coverFadeIn 1.2s ease-out;
   max-width: 100vw;
   width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover__header {
+  width: 100%;
+  padding-top: 0.5rem;
+}
+
+.cover__spacer {
+  flex: 1;
+  min-height: 120px;
+  pointer-events: none;
+}
+
+.cover__footer {
+  width: 100%;
+  padding-bottom: 1.5rem;
 }
 
 @keyframes coverFadeIn {
